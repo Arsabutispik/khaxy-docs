@@ -13,7 +13,7 @@ export default defineConfig({
             "en": "Khaxy Documentation",
             "tr": "Khaxy Belgeleri"
         },
-        favicon: "./public/favicon.svg",
+        favicon: "/favicon.svg",
         logo: {
             light: './src/assets/khaxy-mini-logo-black.svg',
             dark: './src/assets/khaxy-mini-logo-white.svg',
