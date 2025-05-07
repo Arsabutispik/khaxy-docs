@@ -1,0 +1,24 @@
+---
+title: Kaydet Ayarları
+description: Kayıt ayarlanın açıklaması
+lastUpdated: true
+---
+Kayıt özelliği, manuel onay olmadan sunucuya katılan kimsenin olmamasını sağlar.
+Bu özellik, sunucuların temiz ve spamdan uzak kalmasını istediği sunucular için yararlıdır.
+
+## Kayıt Hoş Geldin Kanalı
+Bu kanal, [Kayıt Katılma Mesajı](/tr/configuration/register-settings#register-join-message)'nın gönderileceği yerdir.
+Bu kanal, kayıt özelliğinin çalışması için gereklidir. Bu kanalı ayarlamazsanız,
+bot kayıt mesajını gönderemez.
+
+## Kayıt Kanalı
+Bu kanal, [`/register`](/tr/commands/register) komutunun kullanılabileceği yerdir.
+Bu kanal, kayıt özelliğinin çalışması için gereklidir.
+Bu kanalı, zaten kayıtlı kullanıcıların göremediği ama yeni kullanıcıların görebildiği bir kanala ayarlamanızı öneririz.
+
+## Kayıt Katılma Mesajı
+Bu mesaj, sunucuya yeni bir kullanıcı katıldığında [Kayıt Hoş Geldin Kanalı](/tr/configuration/register-settings#register-welcome-channel)'na gönderilecektir. <br />
+Kullanılabilecek değişkenler hakkında daha fazla bilgi için [Değişkenler](/tr/configuration/variables) sayfasına bakın.
+
+## Kayıt Kanalını Temizle
+Bu ayar, [`/register`](/tr/commands/register) komutu kullanıldığında [Kayıt Kanalı](/tr/configuration/register-settings#register-channel)'ndaki tüm mesajları, sabitlenmiş olanlar hariç, temizlemeye çalışacaktır.

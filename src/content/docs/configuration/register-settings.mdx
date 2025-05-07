@@ -1,0 +1,23 @@
+---
+title: Register Settings
+description: Register settings explained
+lastUpdated: true
+---
+Register feature prevents anyone joining the server without manual approval.
+This feature is useful for servers that want to keep their server clean and spam-free.
+## Register Welcome Channel
+This channel will be where [Register Join Message](/configuration/register-settings#register-join-message) will be sent.
+This channel is required for the register feature to work. If you don't set this channel,
+the bot will not be able to send the register message.
+
+## Register Channel
+This channel is where the [`/register`](/commands/register) command can be used.
+This channel is required for the register feature to work.
+We recommend setting this channel to a channel where already registered users can't see it while new users can.
+
+## Register Join Message
+This message will be sent to the [Register Welcome Channel](/configuration/register-settings#register-welcome-channel) when a new user joins the server. <br />
+Refer to the [Variables](/configuration/variables) page for more information about the variables that can be used in this message.
+
+## Clear Register Channel
+This setting will try to clear all messages, except the pinned ones, in the [Register Channel](/configuration/register-settings#register-channel) when the command [`/register`](/commands/register) is used.
