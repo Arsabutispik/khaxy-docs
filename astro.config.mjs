@@ -38,7 +38,7 @@ export default defineConfig({
             {
                 label: "Configuration",
                 translations: {
-                    "tr": "Yapılandırma"
+                    "tr": "Ayarlar"
                 },
                 items: [
                     {label: "Variables", slug: "configuration/variables", translations: {"tr": "Değişkenler"}},
@@ -47,7 +47,19 @@ export default defineConfig({
                     {label: "Moderation Settings", slug: "configuration/moderation-settings", translations: {"tr": "Moderasyon Ayarları"}},
                     {label: "Role Settings", slug: "configuration/role-settings", translations: {"tr": "Rol Ayarları"}},
                     {label: "Miscellaneous Settings", slug: "configuration/miscellaneous-settings", translations: {"tr": "Çeşitli Ayarlar"}},
+                    {label: "Log Settings", slug: "configuration/log-settings", translations: {"tr": "Günlük Ayarları"}},
                 ]
+            },
+            {
+                label: "Self Hosting",
+                translations: {
+                    "tr": "Kendi Kendine Barındırma"
+                },
+                items: [
+                    {label: "Prerequisites", slug: "self-hosting/prerequisites", translations: {"tr": "Ön Gereksinimler"}},
+                    {label: "Installation", slug: "self-hosting/installation", translations: {"tr": "Kurulum"}}
+                ]
+
             }
         ],
         defaultLocale: 'en',

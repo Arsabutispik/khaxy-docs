@@ -1,0 +1,53 @@
+---
+title: Kurulum
+description: Botu kendiniz çalıştırmak için nasıl kurulum yapacağınız
+lastUpdated: true
+---
+import { Aside } from '@astrojs/starlight/components';
+
+Botu kendiniz çalıştırmak için aşağıdaki adımları izleyin:
+
+1. **Depoyu klonlayın**:
+   Terminalinizi açın ve botun deposunu klonlamak için aşağıdaki komutu çalıştırın:
+   ```bash
+   git clone https://github.com/Arsabutispik/Khaxy.git
+    cd Khaxy
+    ```
+
+2. **Bağımlılıkları yükleyin**:
+    Gerekli bağımlılıkları yüklemek için aşağıdaki komutu çalıştırın:
+    ```bash
+    pnpm install
+    # Eğer pnpm yüklü değilse, npm kullanarak yükleyebilirsiniz:
+    # npm install -g pnpm
+    ```
+
+3. **Ortam değişkenlerini yapılandırın**:
+    `.env.example` dosyasını `.env` olarak kopyalayın ve gerekli ortam
+    değişkenlerini doldurun:
+    ```bash
+    cp .env.example .env
+    ```
+    `.env` dosyasını açın ve aşağıdaki değişkenleri ayarlayın:
+    - `TOKEN`: Discord botunuzun token'ı.
+    - `GUILD_ID`: Geliştirme amaçlı Discord sunucusunun ID'si.
+    - `CLIENT_ID`: Discord uygulamanızın ID'si.
+    - `NODE_ENV`: Üretim ortamları için `production`, geliştirme ortamları için `development` olarak ayarlayın.
+    - `DATABASE_URL`: PostgreSQL veritabanınızın bağlantı dizesi.
+    - `DOCS_URL`: Dokümantasyon sitesi için URL. (İsteğe bağlı, varsayılan `https://docs.khaxy.com`)
+
+4. **Yapılandırmayı değiştirin**:
+   `config.toml` dosyasını ziyaret ederek çeşitli yapılandırma seçeneklerini görebilirsiniz.
+<Aside type="caution">
+    Burada bazı bilgiler zorunlu olabilir, bu nedenle `config.toml` dosyasını düzenlerken dikkatli olun.
+</Aside>
+5. **Veritabanını ayarlayın**:
+    PostgreSQL veritabanınızın çalıştığından ve erişilebilir olduğundan emin olun
+    Bot için yeni bir veritabanı oluşturabilir veya mevcut bir veritabanını kullanabilirsiniz.
+    `.env` dosyanızdaki `DATABASE_URL` değişkenini doğru bağlantı dizesi ile güncelleyin.
+6. **Botu çalıştırın**:
+    Ortam değişkenlerini yapılandırdıktan sonra, botu başlatmak için aşağıdaki komutu çalıştırın:
+    ```bash
+    pnpm deploy-commands # Bu, slash komutlarını Discord'a yükler
+    pnpm start
+    ```

@@ -1,0 +1,49 @@
+---
+title: Installation
+description: How to install the bot for self-hosting
+lastUpdated: true
+---
+import {Aside} from "@astrojs/starlight/components";
+
+To install the bot for self-hosting, follow these steps:
+1. **Clone the repository**:
+   Open your terminal and run the following command to clone the bot's repository:
+   ```bash
+   git clone https://github.com/Arsabutispik/Khaxy.git
+   cd Khaxy
+    ```
+2. **Install dependencies**:
+    Run the following command to install the required dependencies:
+    ```bash
+    pnpm install
+    # If you don't have pnpm installed, you can install it using npm:
+    # npm install -g pnpm
+    ```
+3. **Configure environment variables**:
+Copy the `.env.example` file to `.env` and fill in the required environment variables:
+   ```bash
+   cp .env.example .env
+   ```
+   Open the `.env` file and set the following variables:
+   - `TOKEN`: Your Discord bot token.
+   - `GUILD_ID`: The ID of the Discord server for development purposes.
+   - `CLIENT_ID`: The ID of your Discord application.
+   - `NODE_ENV`: Set to `production` for production environments or `development` for development environments.
+   - `DATABASE_URL`: The connection string for your PostgreSQL database.
+   - `DOCS_URL`: The URL for the documentation site. (Optional, defaults to `https://docs.khaxy.com`)
+
+4. **Change Configuration**:
+   Visit `config.toml` for various configuration options.
+<Aside type="caution">
+    Some information here may be mandatory, so be careful when editing the `config.toml` file.
+</Aside>
+5. **Set up the database**:
+   Ensure your PostgreSQL database is running and accessible.
+   You can create a new database for the bot or use an existing one.
+   Update the `DATABASE_URL` in your `.env` file with the correct connection string.
+6. **Run the bot**:
+   After configuring the environment variables, you can start the bot by running:
+   ```bash
+   pnpm deploy-commands # This deploys the slash commands to Discord
+   pnpm start
+   ```
