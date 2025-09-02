@@ -21,9 +21,18 @@ export default defineConfig({
             light: './src/assets/khaxy-mini-logo-black.svg',
             dark: './src/assets/khaxy-mini-logo-white.svg',
         },
-        social: {
-            github: 'https://github.com/Arsabutispik/Khaxy',
-        },
+        social: [
+            {
+                icon: "github",
+                label: "GitHub",
+                href: "https://github.com/Arsabutispik/Khaxy"
+            },
+            {
+                icon: "discord",
+                label: "Discord",
+                href: "https://discord.gg/rnnYSb9E3E"
+            }
+        ],
         sidebar: [
             {
                 label: "Resources",
